@@ -6,21 +6,21 @@ int main(){
     int tabuleiro[10][10] = {0};
     int i,j;
 
-    int navioHorizontal[3] = {3, 3, 3};
-    int navioVertical[3] = {3, 3, 3};
+    int navioVertical[2] = {3,3};
+    int navioDiagonal[2] = {3,3};
 
     //Posições dos navios
-    int linhaNavioH = 2;
-    int colunaNavioH = 4;
     int linhaNavioV = 5;
     int colunaNavioV = 7;
+    int linhaNavioD = 1;
+    int colunaNavioD = 3;
 
-    for (int i = 0; i < 3; i++){
-        tabuleiro[linhaNavioH][colunaNavioH + i] = navioHorizontal[i];
+    for (int i = 0; i < 2; i++){
+        tabuleiro[linhaNavioV + i][colunaNavioV] = navioVertical[i];
     }
 
-    for (int i = 0; i < 3; i++){
-        tabuleiro[linhaNavioV + i][colunaNavioV] = navioVertical[i];
+    for (int i = 0; i < 2; i++){
+        tabuleiro[linhaNavioD + i][colunaNavioD + i] = navioDiagonal[i];
     }
     
     printf(" *** TABULEIRO BATALHA NAVAL ***\n");
